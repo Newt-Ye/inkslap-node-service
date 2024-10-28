@@ -50,6 +50,11 @@ app.use('/api', productsRouter);
 //     res.status(500)
 // }
 
+// 健康檢查路由
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 function onStart(){
   logger(`Server running on port ${AppConfig.port}`);
 }
